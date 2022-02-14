@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30611.23
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "HLBB_MG_VS", "HLBB_MG_VS.sqlproj", "{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9DA34ECE-4A38-48B0-9AF9-08DBD2DBEB7E}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {08A158AE-2E9F-494C-83E9-51EDAFF1061F}
+	EndGlobalSection
+EndGlobal

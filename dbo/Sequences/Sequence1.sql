@@ -1,0 +1,8 @@
+﻿/****** Object:  Sequence [dbo].[Sequence1]    Script Date: 2/14/2022 7:05:41 PM ******/
+CREATE SEQUENCE [dbo].[Sequence1] 
+ AS [bigint]
+ START WITH 1
+ INCREMENT BY 1
+ MINVALUE -9223372036854775808
+ MAXVALUE 9223372036854775807
+ CACHE

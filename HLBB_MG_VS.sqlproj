@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <Name>HLBB_MG_VS</Name>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectVersion>4.1</ProjectVersion>
+    <ProjectGuid>{9da34ece-4a38-48b0-9af9-08dbd2dbeb7e}</ProjectGuid>
+    <DSP>Microsoft.Data.Tools.Schema.Sql.Sql130DatabaseSchemaProvider</DSP>
+    <OutputType>Database</OutputType>
+    <RootPath>
+    </RootPath>
+    <RootNamespace>HLBB_MG_VS</RootNamespace>
+    <AssemblyName>HLBB_MG_VS</AssemblyName>
+    <ModelCollation>1033, CI</ModelCollation>
+    <DefaultFileStructure>BySchemaAndSchemaType</DefaultFileStructure>
+    <DeployToDatabase>True</DeployToDatabase>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetLanguage>CS</TargetLanguage>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <SqlServerVerification>False</SqlServerVerification>
+    <IncludeCompositeObjects>True</IncludeCompositeObjects>
+    <TargetDatabaseSet>True</TargetDatabaseSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>False</TreatWarningsAsErrors>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <BuildScriptName>$(MSBuildProjectName).sql</BuildScriptName>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">11.0</VisualStudioVersion>
+    <!-- Default to the v11.0 targets path if the targets file for the current VS version is not found -->
+    <SSDTExists Condition="Exists('$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets')">True</SSDTExists>
+    <VisualStudioVersion Condition="'$(SSDTExists)' == ''">11.0</VisualStudioVersion>
+  </PropertyGroup>
+  <Import Condition="'$(SQLDBExtensionsRefPath)' != ''" Project="$(SQLDBExtensionsRefPath)\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <Import Condition="'$(SQLDBExtensionsRefPath)' == ''" Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v$(VisualStudioVersion)\SSDT\Microsoft.Data.Tools.Schema.SqlTasks.targets" />
+  <ItemGroup>
+    <Folder Include="Properties" />
+    <Folder Include="dbo\" />
+    <Folder Include="dbo\Tables\" />
+    <Folder Include="dbo\Functions\" />
+    <Folder Include="dbo\Stored Procedures\" />
+    <Folder Include="dbo\Sequences\" />
+    <Folder Include="Scripts\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Build Include="dbo\Tables\aaSolicitorDisbursementSubmissionAttachment.sql" />
+    <Build Include="dbo\Tables\attachment_detail.sql" />
+    <Build Include="dbo\Tables\attachment_detail_bk.sql" />
+    <Build Include="dbo\Tables\attachment_master.sql" />
+    <Build Include="dbo\Tables\attachment_master_bk.sql" />
+    <Build Include="dbo\Tables\attachment_staging.sql" />
+    <Build Include="dbo\Tables\attachment_staging_bk.sql" />
+    <Build Include="dbo\Tables\ddProjectSubmissionAttachment.sql" />
+    <Build Include="dbo\Tables\devportal_attachment_master.sql" />
+    <Build Include="dbo\Tables\errorLog.sql" />
+    <Build Include="dbo\Tables\FireEyeAPILog.sql" />
+    <Build Include="dbo\Tables\FireEyeAPILog_CheckJobStatus.sql" />
+    <Build Include="dbo\Tables\FireEyeAPILog_login.sql" />
+    <Build Include="dbo\Tables\FireEyeAPILog_logout.sql" />
+    <Build Include="dbo\Tables\FireEyeAPILog2.sql" />
+    <Build Include="dbo\Tables\FireEyeFailedLog.sql" />
+    <Build Include="dbo\Tables\maliciousfilelog.sql" />
+    <Build Include="dbo\Tables\resultlog.sql" />
+    <Build Include="dbo\Functions\ufn_DevPortal_GetCaseNumber.sql" />
+    <Build Include="dbo\Functions\ufn_DevPortal_GetDraft.sql" />
+    <Build Include="dbo\Functions\ufn_DevPortalResubmit_GetCaseNumber.sql" />
+    <Build Include="dbo\Functions\ufn_DevPortalReSubmit_GetRejectedID.sql" />
+    <Build Include="dbo\Functions\ufn_getPDFImage.sql" />
+    <Build Include="dbo\Functions\ufn_getPDFImageName.sql" />
+    <Build Include="dbo\Functions\ufn_getPDFImageNameFileType.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_Check_ProjectDisbursementReSubmitAttachment_Completed_GetList.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_Check_ProjectDisbursementSubmissionAttachment_CheckCaseInMaster.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_Check_ProjectDisbursementSubmissionAttachment_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_Check_ProjectDisbursementSubmissionAttachment_Completed_GetList.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_Check_ProjectResubmissionAttachment_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_Check_SolicitorDisbursementSubmissionAttachment_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_list_ProjectDisbursementResubmissionAttachment_For_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_list_ProjectDisbursementSubmissionAttachment_For_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_list_SolicitorDisbursementSubmissionAttachment_For_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_solicitorDisbursementAttachment_create_master_data.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_SolicitorDisbursementAttachment_PreUpload.sql" />
+    <Build Include="dbo\Stored Procedures\aa_ws_SolicitorDisbursementSubmission_CheckARN.sql" />
+    <Build Include="dbo\Stored Procedures\aaa_ws_SQLSolicitorDisbursementSubmissionAttachment_add_withattachment.sql" />
+    <Build Include="dbo\Stored Procedures\aaa_ws_SQLSolicitorDisbursementSubmissionAttachment_DeleteAllAttachments.sql" />
+    <Build Include="dbo\Stored Procedures\aaa_ws_SQLSolicitorDisbursementSubmissionAttachment_DeleteAttachment.sql" />
+    <Build Include="dbo\Stored Procedures\aaa_ws_SQLSolicitorDisbursementSubmissionAttachment_SelectAll.sql" />
+    <Build Include="dbo\Stored Procedures\aaa_ws_SQLSolicitorDisbursementSubmissionAttachment_SelectAttachmentCount.sql" />
+    <Build Include="dbo\Stored Procedures\ddProjectDisbursementSubmission_Attachment_CountBySubmission.sql" />
+    <Build Include="dbo\Stored Procedures\ddProjectDisbursementSubmission_Attachment_GetAttachment.sql" />
+    <Build Include="dbo\Stored Procedures\ddProjectDisbursementSubmission_Resubmit_CheckDuplicate.sql" />
+    <Build Include="dbo\Stored Procedures\ddProjectDisbursementSubmission_Resubmit_SaveAttachment.sql" />
+    <Build Include="dbo\Stored Procedures\ddProjectDisbursementSubmission_SaveAttachment.sql" />
+    <Build Include="dbo\Stored Procedures\tbd_getattachmentforpdfpasswordtest.sql" />
+    <Build Include="dbo\Stored Procedures\tbd_usp_savexmlforpdfpasswordtest.sql" />
+    <Build Include="dbo\Stored Procedures\tbd_usp_solicitorattachment_upload.sql" />
+    <Build Include="dbo\Stored Procedures\tbd_usp_valuerattachment_upload.sql" />
+    <Build Include="dbo\Stored Procedures\usp_errorlog_view.sql" />
+    <Build Include="dbo\Stored Procedures\usp_getErrorLog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_list_attachment_to_check.sql" />
+    <Build Include="dbo\Stored Procedures\usp_list_SolicitorDisbursementSubmissionAttachmentInStaging.sql" />
+    <Build Include="dbo\Stored Procedures\usp_list_SolicitorSubmissionAttachmentInStaging.sql" />
+    <Build Include="dbo\Stored Procedures\usp_save_fireeyefailedlog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_save_fireeyelog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_save_fireeyelog_login.sql" />
+    <Build Include="dbo\Stored Procedures\usp_save_fireeyelog_logout.sql" />
+    <Build Include="dbo\Stored Procedures\usp_save_fireeyelog2.sql" />
+    <Build Include="dbo\Stored Procedures\usp_solicitorattachment_preupload.sql" />
+    <Build Include="dbo\Stored Procedures\usp_solicitorsubmission_setuploadcomplete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_valuersubmission_setuploadcomplete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_Check_SolicitorSubmissionAttachment_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_Check_ValuerSubmissionAttachment_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_deleterecords.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_DeveloperAttachment_create_master_data.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_DeveloperResubmitAttachment_create_master_data.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_errorLog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_getfailedattachments.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_getmaliciousfilesLog.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_list_SolicitorSubmissionAttachment_For_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_list_ValuerSubmissionAttachment_For_Completed_ARN.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_list_ValuerSubmissionAttachmentInStaging.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_solicitorattachment_create_master_data.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_solicitorattachment_preupload.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_SolicitorSubmission_CheckARN.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_valuerattachment_create_master_data.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_valuerattachment_preupload.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws_ValuerSubmission_CheckARN.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_list_attachment_to_scan.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_lock_master_by_workflow_arn.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_save_result.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_save_submission_detail.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_search_available_arn_to_check.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_search_available_arn_to_start.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_update_masterattachment_status_to_complete.sql" />
+    <Build Include="dbo\Stored Procedures\usp_ws2_update_masterattachment_status_to_inprogress.sql" />
+    <Build Include="dbo\Sequences\Sequence1.sql" />
+    <None Include="Scripts\ScriptsIgnoredOnImport.sql" />
+  </ItemGroup>
+</Project>
